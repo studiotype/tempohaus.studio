@@ -1,0 +1,845 @@
+
+/*-----------------
+* [Master Stylesheet]
+*
+* Theme    : tempohaus
+* Version  : 1.0
+* Author   : beingeorge
+* Support  : hello@beingeorge.com
+* 
+------------------*/
+
+
+
+/*-----------------
+  [ALL CONTENTS]
+
+1. General styles
+2. Header
+4. Home
+4. Blog Details
+5. Footer
+6. Blog Listing page
+7. All Media Queries
+
+------------------*/
+
+@font-face{font-family:aktiv-grotesk;src:url(https://use.typekit.net/af/28158e/00000000000000003b9b4066/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/28158e/00000000000000003b9b4066/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/28158e/00000000000000003b9b4066/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}
+
+
+/* ---------------------------------------------- /*
+*   1. General styles
+/* ---------------------------------------------- */
+
+
+body {
+    font-family: neue-haas-grotesk-text;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    font-size: 18px;
+    color: #222;
+    position: relative;
+}
+
+a:after {
+
+}
+
+a:hover {
+    text-decoration: none;
+    color: #27cae4;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+}
+
+/*** Transition elements ***/
+
+.navbar a,
+.form-control {
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+a,
+.btn {
+    -webkit-transition: all 0.125s ease-in-out 0s;
+    -moz-transition: all 0.125s ease-in-out 0s;
+    -ms-transition: all 0.125s ease-in-out 0s;
+    -o-transition: all 0.125s ease-in-out 0s;
+    transition: all 0.125s ease-in-out 0s;
+}
+
+/*** Reset box-shadow ***/
+
+.btn {
+    color: #fff;
+    background-color: #222;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+/*** Typography ***/
+
+h1, h2, h3, h4, h5, h6 {
+    font: 400 40px/1.2 neue-haas-grotesk-display;
+    margin: 0;
+    color: #222;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+
+h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+}
+
+h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+p {
+    color: #222;
+}
+
+blockquote {
+    padding: 50px 0px;
+    border-radius: 7px;
+    text-align: center;
+    font-family: linotype-sabon;
+    font-size: 52px;
+    max-width: 1000px;
+    margin: 30px auto;
+    line-height: 60px;
+}
+
+blockquote p {
+    color: #586377;
+    font-size: 16px;
+    margin: 0;
+}
+
+blockquote cite {
+    display: block;
+    color: #222;
+    font-size: 16px;
+    font-style: normal;
+    font-family: neue-haas-grotesk-display;
+    letter-spacing: 1px;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1350px;
+}
+
+.container-full {
+    padding: 30px 0 0 30px;
+    max-width: 100%;
+}
+
+/*** Custom button style ***/
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: 0;
+    height: 50px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: inherit !important;
+    color: #fff;
+}
+
+.btn-xs {
+    font-size: 13px;
+    padding: 2px 30px;
+    border: 0;
+    height: 42px;
+    width: 108px;
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.form-control {
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: unset;
+    background-color: #fff;
+}
+
+textarea.form-control {
+    height: 100px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group .form-text {
+    font-size: 12px;
+    color: #222;
+}
+
+.form-wrapper .btn.disabled {
+    opacity: 1;
+}
+
+.help-block.with-errors li {
+    border-radius: 2px;
+    background: #cc3b3b url(../images/icon_close_7_light.png) no-repeat 9px 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 23px;
+    margin: 12px 0;
+    padding: 5px 15px 3px 25px;
+}
+
+.form-group.has-error.has-danger .form-control {
+    border: 1px solid #e99292 !important;
+}
+
+/* ---------------------------------------------- /*
+*   2. Header 
+/* ---------------------------------------------- */
+
+header.header {
+
+}
+
+.affix {
+    display: none;
+    height: 76px;
+    width: 100%;
+    position: relative;
+    background: #fff;
+    z-index: 0;
+    top: 0;
+}
+
+.navbar-custom {
+    padding: 9px 0px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 24px;
+    color: #222;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 300;
+    font-family: neue-haas-grotesk-display;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.navbar-light .navbar-brand {
+    font-size: 99px;
+    line-height: 130px;
+    font-family: neue-haas-grotesk-display;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #ccc;
+}
+
+.navbar-light .navbar-toggler {
+    padding: 0;
+    border: none;
+}
+
+button.navbar-toggler-close {
+    position: fixed;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    z-index: 21;
+    right: 20px;
+    border: 0;
+    display: none;
+}
+
+button.navbar-toggler-close:after, 
+button.navbar-toggler-close:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #222;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    transform-origin: center;
+}
+
+button.navbar-toggler-close:after {
+    transform: rotate(-45deg);
+}
+
+button.navbar-toggler-close:before {
+    transform: rotate(45deg);
+}
+
+/* ---------------------------------------------- /*
+*   3. Home 
+/* ---------------------------------------------- */
+
+.banner {
+    padding: 25px 0 33px;
+}
+
+.banner h1, .banner a {
+    font-weight: 100;
+    max-width: 755px;
+    color: #222;
+    font-size: 36px;
+    line-height: 55px;
+}
+
+.homeImage-list img {
+    margin-bottom: 1px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity;
+}
+
+.carousel-fade  .carousel-item.active,
+.carousel-fade  .carousel-item-next.carousel-item-left,
+.carousel-fade  .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel  a.carousel-control-next {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 0;
+    cursor: default;
+    opacity: 0;
+}
+
+
+.banner.full-height {
+    min-height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner a:hover {
+    color: #ccc;
+}
+
+.banner a {
+    border-bottom: 1px solid rgba(34,34,34,.3);
+}
+
+.scroll-indicator-arrow {
+    overflow: hidden;
+    fill: transparent;
+    vertical-align: middle;
+    stroke: #333;
+}
+
+.scrolldown-arrow {
+    border-bottom: none !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+.scrolldown-arrow svg {
+    width: 100%;
+    height: 24px;
+}
+
+.scrolldown-arrow {
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+
+.scrolldown-arrow:hover {
+    padding-bottom: 0;
+}
+
+.page-wrapper {
+    background: #fff;
+    padding-bottom: 70px;
+}
+
+/* ---------------------------------------------- /*
+*   3. Blog Page 
+/* ---------------------------------------------- */
+
+
+.books-list img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.books-list li {
+    margin-bottom: 100px;
+}
+
+.books-list a {
+    display: block;
+    overflow: hidden;
+}
+
+.books-list a:hover img {
+    transform: scale(1.1);
+}
+
+
+.blogDetail {
+    padding-top: 30px;
+}
+
+.blogDetail--navigation .row {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.blog-nav a {
+    font-family: aktiv-grotesk;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.blog-nav span {
+    position: relative;
+    top: -3px;
+    font-size: 24px;
+}
+
+.blog-nav a {
+    border-bottom: 1px solid rgba(34,34,34,.3);
+}
+
+.nav-next {
+    text-align: right;
+}
+
+.full-width img {
+    width: 100%;
+}
+
+.section-head h2 {
+    font-family: neue-haas-grotesk-display;
+    font-size: 36px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-head h2:after {
+    content: "";
+    position: absolute;
+    left: 0;bottom: 0;
+    height: 2px;
+    width: 30px;
+    background: #333;
+}
+
+.section-head a {
+    border-bottom: 1px solid rgba(34,34,34,.3)
+}
+
+.blogDetail--content {
+    padding-top: 30px;
+}
+
+.post-details figure {
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------- /*
+*  4. contact
+/* ---------------------------------------------- */
+
+.custom-container {
+    max-width: 1015px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact-wrapper h2 {
+    margin: 30px 0;
+    font-size: 36px;
+}
+
+hr {
+    margin: 40px 0;
+    border-top: 1px solid #222;
+}
+
+.contact-wrapper a {
+    border-bottom: 1px solid rgba(34,34,34,.3);
+}
+
+.contact-wrapper {
+    margin-bottom: 50px;
+}
+
+.contact-wrapper ul {
+    margin-top: 18px;
+    padding-left: 40px;
+}
+
+.contact-wrapper li {
+    list-style: disc;
+    margin: 9px 0;
+}
+
+
+/* ---------------------------------------------- /*
+*  4. Design
+/* ---------------------------------------------- */
+
+.design-wrapper {
+    padding-top: 30px;
+}
+
+.design-wrapper .container-fluid {
+    padding: 0 30px;
+}
+
+h3.featured-head {
+    font-family: linotype-sabon;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .59em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.featured-logos img:hover {
+    transform: scale(1.1);
+}
+
+.featured-logos img {
+    transition: .2s;
+}
+
+/* ---------------------------------------------- /*
+*   5. Footer
+/* ---------------------------------------------- */
+
+.scroll-up {
+    display: none;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+.scroll-up a {
+    transform: rotate(90deg);
+    display: block;
+    font-size: 50px;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.scroll-up a:hover {
+    color: #333;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 90px 0 190px;
+}
+
+.footer-left h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+}
+
+.footer-left a {
+    margin: 10px 0 !important;
+    display: inline-block;
+}
+
+.footer-links a, .footer-left a {
+    margin-bottom: 17px;
+    border-bottom: 1px solid rgba(34,34,34,.3);
+    display: inline-block;
+}
+
+.footer-right label {
+    margin-bottom: 35px;
+    color: #222;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.footer-right .form-group {
+    display: flex;
+}
+
+.footer-right input {
+    margin-right: 10px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+footer .form-control {
+    height: 50px;
+}
+
+/* ---------------------------------------------- /*
+*  6. pparel
+/* ---------------------------------------------- */
+
+.apparel-details {
+    padding: 30px 0 30px;
+}
+
+.apparel-details h2 {
+    font-size: 36px;
+}
+
+.apparel-details p {
+    margin: 18px 0;
+}
+
+.avail-details {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.avail-details h5 {
+    font-weight: 700;
+    font-family: neue-haas-grotesk-text;
+}
+
+.avail-details a {
+    border-bottom: 1px solid rgba(34,34,34,.3);
+}
+
+/* ---------------------------------------------- /*
+*  7. All Media Queries
+/* ---------------------------------------------- */
+
+@media (max-width: 1200px) {
+    
+    .navbar-light .navbar-brand {
+        font-size: 7vw;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px)  {
+}
+
+
+@media (max-width: 991px) {
+    .navbar-light .navbar-brand {
+        font-size: 50px;
+    }
+
+    .navbar-custom {
+        padding: 9px 15px
+    }
+    .navbar-collapse, .collapsing {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background: #fff;
+        height: 100% !important;
+        top: 0;
+        right: 0;
+        padding: 30px;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: .3s;
+        display: block !important;
+    }
+    .navbar-collapse.show {
+        transform: translateX(0%);    
+    }
+
+    .navbar-collapse ul {
+        margin: 0 !important;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-light .navbar-brand {
+        font-size: 38px;
+        line-height: normal;
+    }
+
+    .banner h1, .banner a {
+        max-width: 100%;
+        font-size: 28px;
+        letter-spacing: 0px;
+        line-height: normal;
+    }
+    header.header {
+        position: fixed;
+        background: #fff;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+    }
+
+    .affix {
+        display: block;
+    }
+
+    .img-wrap {
+        width: 100% !important;
+    }
+
+    .scroll-up {
+        bottom: 10px;
+        right: 20px;
+    }
+
+    footer {
+        padding: 90px 0;
+    }
+
+    ul.footer-links {
+        margin-top: 30px;
+    }
+
+    .img-wrap-content {
+        right: 20px;
+        bottom: 20px;
+    }
+    .container-full {
+        padding: 20px 0 0 20px;
+    }
+
+    .page-wrapper {
+        padding-bottom: 60px
+    }
+
+    .page-wrapper .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .blog-nav {
+        text-align: center;
+    }
+
+    .blog-nav.nav-next {
+        margin-top: 20px;
+    }
+
+    blockquote {
+        font-size: 24px !important;
+        line-height: 1.5em !important;
+        letter-spacing: -.01em !important;
+        padding: 0;
+    }
+
+    blockquote cite{
+        line-height: 24px;
+        margin-top: 15px;
+    }
+
+    .section-head h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .blogDetail {
+        padding-top: 50px;
+    }
+    .banner {
+        padding: 65px 0 33px;
+    }
+}
+
+@media (max-width: 480px) {
+
+}

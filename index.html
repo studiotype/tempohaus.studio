@@ -1,0 +1,93 @@
+---
+layout: default
+pageTitle: Book Design & Typesetting
+---
+
+<div class="banner">
+    <div class="container">
+        <h1>{{page.pageTitle}}</h1>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+                    <div class="carousel-inner">
+                        {% for image in site.static_files %}
+                            {% if image.path contains 'assets/images/hp' %}
+                                <div class="carousel-item">
+                                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <blockquote>“Shortlisted for Best Independent Book Design, 2019”
+                    <cite>— Australian Book Design Awards</cite>
+                </blockquote>
+            </div>
+        </div>
+        
+        <h3 class="featured-head">FEATURED CLIENTS</h3>
+        <div class="row featured-logos">
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/Bloomsbury.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/02_prh-uk.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/03_acmi.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/04_text.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/05_sup.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/06_uom.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/ltup.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/themonthly.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/tsp.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/liftedbrow.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/browbooks.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/qe.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/blackinc.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/sportsgirl.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/aap.png" alt="image" />
+            </div>
+            <div class="col-md-3 col-6">
+                <img src="{{ site.baseurl }}/assets/images/logos/rmit.png" alt="image" />
+            </div>
+        </div>
+    </div>
+</div>

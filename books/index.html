@@ -1,0 +1,30 @@
+---
+layout: default
+pageTitle: Books Design
+title:  Typography Studio -- Book Design
+permalink: /books
+---
+
+<div class="banner">
+    <div class="container">
+        <h1>{{page.pageTitle}}</h1>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="homeImage-list">
+                    {% for image in site.static_files %}
+                        {% if image.path contains 'assets/images/hp' %}
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

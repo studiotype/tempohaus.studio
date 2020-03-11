@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blogDetail">
+                    <div class="blogDetail--head text-center">
+
+                        {% if page.banner_image %}
+                        <div class="blog-thumbnail">
+                            <img src="{{ "/assets/images/" | append: page.banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                        </div>
+                        {% endif %}
+                        
+                    </div>
+
+                    <div class="blogDetail--content">
+                        {{content}}
+                    </div>
+
+
+
+                    <div class="blogDetail--navigation">
+                        <div class="custom-container">
+                            <hr>
+                        
+                            <div class="row align-items-end">
+                                <div class="col-md-6">
+                                    {% if page.previous.url %}
+                                    <div class="blog-nav nav-previous">
+                                        <span>↞ </span>
+                                        <a href="{{ site.baseurl }}{{page.previous.url}}.html" class="nav-inside">Previous project</a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    {% if page.next.url %}
+                                    <div class="blog-nav nav-next">
+                                        <a href="{{ site.baseurl }}{{page.next.url}}.html">Next Project</a>
+                                        <span class="nav-before">↠</span>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
