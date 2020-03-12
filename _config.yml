@@ -15,7 +15,7 @@ title: "Typography Studio"
 #
 
 # A description of your site
-description: "Tempohaus Desc"
+description: "A book design and typesetting practice based in Melbourne, Australia."
 
 # The subpath of your site
 # Leave baseurl blank when you run it in local
@@ -39,7 +39,6 @@ navigation:
 - text: Contact
   url: /contact.html
 
-permalink: /books/:title
 
 # Author Info
 author_name: "Edward tempohaus"
