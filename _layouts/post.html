@@ -11,7 +11,7 @@ layout: default
 
                         {% if page.banner_image %}
                         <div class="blog-thumbnail">
-                            <img src="{{ "/assets/images/" | append: page.banner_image | prepend: site.baseurl }}.html" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
+                            <img src="{{ "/assets/images/" | append: page.banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
                         </div>
                         {% endif %}
                         
