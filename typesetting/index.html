@@ -1,0 +1,39 @@
+---
+layout: default
+pageTitle: Books Design
+title:  Typography Studio -- Book Design
+permalink: /typesetting
+---
+
+<div class="banner">
+    <div class="container"> 
+        <h1>{{page.pageTitle}}</h1>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <div class="container ">
+        <p>Since 2009, we have typeset hundred of books – a comprehensive project folio is available on request. In the meantime, preview some recent projects ↓</p>
+        <p>Please email <a href="mailto:duncan@typography.studio">duncan@typography.studio</a> to discuss your project and request a quote.</p>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="books-list">
+                    <ul>
+                        {% for post in site.posts %}
+                        <li>
+                            <a href="{{site.baseurl}}{{post.url}}">
+                                <img src="{{ "/assets/images/" | append: post.banner_preview | prepend: site.baseurl }}" alt="Blog Desc">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
